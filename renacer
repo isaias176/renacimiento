@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Renacimiento</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  height: 100vh;
+  background: url('renacimiento.png') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  width: 100px;
+  margin: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>RENACIMIENTO</h1>
+</div>
+
+<h2>Personajes</h2>
+
+<img src="vida.png">
+<img src="muerte.png">
+
+</body>
+</html>
