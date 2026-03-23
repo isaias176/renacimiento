@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Renacimiento</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+
+/* MENU */
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.8);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* MINI IMAGENES */
+.mini-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mini-card img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.mini-card span {
+  font-size: 10px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("renacimiento.jpeg.jpeg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav class="menu">
+  <h3>RENACIMIENTO</h3>
+
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#historia">Historia</a></li>
+    <li><a href="#musica">Música</a></li>
+
+    <li class="mini-card" onclick="irA('vida')">
+      <img src="vida.png">
+      <span>Vida</span>
+    </li>
+
+    <li class="mini-card" onclick="irA('muerte')">
+      <img src="muerte.png">
+      <span>Muerte</span>
+    </li>
+
+    <li class="mini-card" onclick="irA('renacer')">
+      <img src="renacimiento.jpeg.jpeg">
+      <span>Renacer</span>
+    </li>
+  </ul>
+</nav>
+
+<!-- INICIO -->
+<div class="hero" id="inicio">
+  <div>
+    <h1>RENACIMIENTO</h1>
+
+    <button onclick="irA('historia')" 
+    onmouseover="this.style.background='darkred'" 
+    onmouseout="this.style.background='red'"
+    style="margin-top:20px; padding:12px 25px; background:red; color:white; border:none; border-radius:8px; font-size:16px; cursor:pointer;">
+      Entrar 🔥
+    </button>
+
+  </div>
+</div>
+
+<!-- SECCIONES -->
+<section id="historia">
+  <h2>Historia</h2>
+  <p>El mundo ha caído... comienza el renacimiento.</p>
+</section>
+
+<section id="musica">
+  <h2>Música</h2>
+  <p>Próximamente...</p>
+</section>
+
+<section id="vida">
+  <h2>Diosa de la Vida</h2>
+</section>
+
+<section id="muerte">
+  <h2>Diosa de la Muerte</h2>
+</section>
+
+<section id="renacer">
+  <h2>Renacimiento</h2>
+</section>
+
+<script>
+function irA(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
